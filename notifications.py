@@ -3,8 +3,8 @@ from email.message import EmailMessage
 
 def sendEmail(recipientEmail, subject, body):
     # initialize email variables
-    senderEmail = "ur_id"
-    password = "ur_pass"
+    senderEmail = ""
+    password = ""
     messg = EmailMessage()
     messg.set_content(body)
     messg['subject'] = subject  
@@ -25,7 +25,7 @@ def sendEmail(recipientEmail, subject, body):
     server.quit()
 
 if __name__=='__main__':
-    reciprecipientEmail = "ur_id_recipient"
-    subject = "class reminder"
-    body = "Someone is calling u in class"
+    reciprecipientEmail = ""
+    subject = "SPTM testing"
+    body = "This message is sent to you by AYAAN from a python script"
     sendEmail(reciprecipientEmail, subject, body)
