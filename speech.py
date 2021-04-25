@@ -1,24 +1,28 @@
 import speech_recognition as sr
 import time as t
 
-# obtain audio from the microphone
 def audioController(CONST_requiredKeyword0, CONST_requiredKeyword1):
+# OBTAIN AUDIO FROM MICHROPHONE
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        tic = t.perf_counter()
-        print(f"Say something! --in { tic:0.2f} seconds")
+        # tic = t.perf_counter()
+        # print(f"Say something! --in { tic:0.2f} seconds")
+        print(f"Say something! ")
         r.adjust_for_ambient_noise(source)
         audio = r.listen(source)
-        toc = t.perf_counter()
-        # recognize speech
-        print(f"Audio captured... --in {toc - tic:0.2f} seconds")
+        # toc = t.perf_counter()
+        # RECOGNIZE SPEECH
+        print(f"Audio captured...")
+        # print(f"Audio captured... --in {toc - tic:0.2f} seconds")
     try:
 
-        tic = t.perf_counter()
+        # tic = t.perf_counter()
+        # STORING CONVERTED TEXT IN OUTPUT
         output =  r.recognize_google(audio)
-        toc = t.perf_counter()
-        print(f"You said -- {output} --in {toc - tic:0.2f} seconds" )
-        # CHECKING THE REQUIRED WORD
+        # toc = t.perf_counter()  
+        print(f"You said -- {output} " )
+        # print(f"You said -- {output} --in {toc - tic:0.2f} seconds" )
+        # CHECKING THE REQUIRED WORD -- there are hard coded, FIXME:
         if(CONST_requiredKeyword0 in output or CONST_requiredKeyword1 in output):
             return 1
         elif ("stop" in output):

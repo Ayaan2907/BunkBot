@@ -1,10 +1,8 @@
 import smtplib 
 from email.message import EmailMessage
 
-def sendEmail(recipientEmail, subject, body):
-    # initialize email variables
-    CONST_senderEmail = "
-    CONST_password = ""
+def sendEmail(recipientEmail,  CONST_senderEmail, CONST_password, subject, body):
+    # composing the message
     messg = EmailMessage()
     messg.set_content(body)
     messg['subject'] = subject  
