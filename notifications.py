@@ -3,7 +3,7 @@ from email.message import EmailMessage
 
 def sendEmail(recipientEmail, subject, body):
     # initialize email variables
-    CONST_senderEmail = ""
+    CONST_senderEmail = "
     CONST_password = ""
     messg = EmailMessage()
     messg.set_content(body)
@@ -16,22 +16,15 @@ def sendEmail(recipientEmail, subject, body):
 
     # start TLS for security
     server.starttls()
-    print("server started...")
+    print("Server started...")
     # Authentication
     server.login(CONST_senderEmail, CONST_password)
     # sending the mail
     # server.sendmail(senderEmail, recipientEmail, subject, body)
     server.send_message(messg)
-    print("message sent!!!")
+    print("Message sent!!!")
     # terminating the session
     server.quit()
-    print("server stopped...")
+    print("Server stopped...")
 
-def main():
-    reciprecipientEmail = "ayaanansari7921@outlook.com"
-    subject = "SPTMlib testing"
-    body = "This message is sent to you by AYAAN from a python script to test the program"
-    sendEmail(reciprecipientEmail, subject, body)
-    
-if __name__=='__main__':
-    main()
+# if __name__=='__main__':

@@ -1,28 +1,33 @@
 import speech_recognition as sr
-import notifications
+import time as t
 
 # obtain audio from the microphone
-r = sr.Recognizer()
-while True:
+def audioController(CONST_requiredKeyword0, CONST_requiredKeyword1):
+    r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Say something!")
+        tic = t.perf_counter()
+        print(f"Say something! --in { tic:0.2f} seconds")
         r.adjust_for_ambient_noise(source)
-        print('listening...')
         audio = r.listen(source)
-    # recognize speech
-        print("audio sent...")
+        toc = t.perf_counter()
+        # recognize speech
+        print(f"Audio captured... --in {toc - tic:0.2f} seconds")
     try:
-        # print("Sphinx thinks you said " + r.recognize_sphinx(audio))
+
+        tic = t.perf_counter()
         output =  r.recognize_google(audio)
-        print(f" you said {output}" )
-        CONST_requiredKeyword = "interesting"
-        if(CONST_requiredKeyword in output):
-            print("sending the mail...")
-            # FIXME: run the whole script
-            notifications.main()
+        toc = t.perf_counter()
+        print(f"You said -- {output} --in {toc - tic:0.2f} seconds" )
+        # CHECKING THE REQUIRED WORD
+        if(CONST_requiredKeyword0 in output or CONST_requiredKeyword1 in output):
+            return 1
+        elif ("stop" in output):
+            return 0
         else:
-            print(f"failed to send... {output}")
+            print(f"Keyword missing in {output}")
     except sr.UnknownValueError:
-        print("Google could not understand audio")
+        print(f"Google could not understand audio")
     except sr.RequestError as e:
-        print("Google error; {0}".format(e))
+        print(f"Google error; {0}".format(e))
+
+# if __name__ == "__main__":
