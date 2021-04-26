@@ -14,7 +14,6 @@ Automating the replies on calling our name in meetings and notifying us about th
 - For email `python smtplib` will be required.
 - Now for speech recognition and related stuff you need
     1. `speechRecognition`
-    2. `pyttsx3`
     3. `pyAudio`
 - For counts `time` is required
 > Note: for automation step is a TODO
@@ -37,4 +36,6 @@ Automating the replies on calling our name in meetings and notifying us about th
 > Note: The password is not the gmail password it should be [gmailAppPassword](https://support.google.com/accounts/answer/185833?hl=en). 
 - Run `python3 index.py`
 
+## Fixes
+- Passing `keyword_to_match_with` needs optimization
 ## Refrences
