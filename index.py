@@ -1,28 +1,24 @@
-import notifications
-import speech, time 
-# import time as t
+import notifications,  speech
+# , playAudio
+import time
 
 # initialized SENDER variables WHICH SHOULD BE CHANGED ACCORDINGLY
-CONST_senderEmail = "initialize_me"
-CONST_password = "initialize_me"
-reciprecipientEmail = "initialize_me"
+CONST_senderEmail = "munawarsayed0908@gmail.com"
+CONST_password = ""
+reciprecipientEmail = "munawarsayed0908@gmail.com"
+subject = "Testing OCassistant"
+body = f"""
+        This message is sent by AYAAN from a python script to test the script.
 
-subject = "Finalising changes"
-body = """
-        This message is sent to you by AYAAN from a python script to test the final steps program
-    """
-# hard coding the keywords
-keyWord0 = "send"    
-keyWord1 = "interesting"       
+        Someone is calling you in the class.
+        """
+keywords = ["ayaan", "68", "iron"] 
+
 while True:
-    controller = speech.audioController(keyWord0, keyWord1)
-    if(controller == 1):
-        tic = time.perf_counter()
+    initialCounter = time.perf_counter()
+    controller = speech.audioController(keywords) 
+    if(controller==1):
         notifications.sendEmail(reciprecipientEmail, CONST_senderEmail, CONST_password, subject, body)
-        # notifications.main()
-        toc = time.perf_counter()
-        print(f" mail sent in {toc - tic:0.2f} seconds")
-    elif(controller==0):
-        print("process terminated!")
-        break
+        finalCounter = time.perf_counter()   
+        print(f" mail sent in {finalCounter - initialCounter:0.2f} seconds")
     print("======================")
