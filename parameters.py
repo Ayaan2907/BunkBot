@@ -1,7 +1,7 @@
 # USER EMAIL PARAMETERS
-CONST_senderEmail = "munawarsayed0908@gmail.com"
-CONST_EmailPassword = "gpvvvumbhtuncohq "
-reciprecipientEmail = "munawarsayed0908@gmail.com"
+CONST_senderEmail = ""
+CONST_EmailPassword = ""
+reciprecipientEmail = ""
 subject = "Testing OCassistant"
 body = f"""
         This message is sent by AYAAN from a python script to test the script.
@@ -13,8 +13,8 @@ keywords = ["ayaan", "68", "iron", " "]
 
 # ATTOMATION PARAMETERS
 URL = "https://teams.microsoft.com/_#/calendarv2"
-CONST_userName = "s19_mohammed_ayaan@mgmcen.onmicrosoft.com"
-CONST_loginPassword = "$$Asus@2020$$ "
+CONST_userName = ""
+CONST_loginPassword = ""
 schedule = [ 
     # for teams, 
     {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'}, 
