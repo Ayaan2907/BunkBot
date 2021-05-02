@@ -10,18 +10,3 @@ body = f"""
 
 # USER KEYWORD PARAMETERS
 keywords = ["ayaan", "68", "iron", " "] 
-
-# ATTOMATION PARAMETERS
-URL = "https://teams.microsoft.com/_#/calendarv2"
-CONST_userName = "s19_mohammed_ayaan@mgmcen.onmicrosoft.com"
-CONST_loginPassword = "$$Asus@2020$$ "
-schedule = [ 
-    # for teams, 
-    {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'}, 
-    {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'},
-    {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'},
-    {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'},
-    {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'},
-    {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'},
-    {'firstLecStart' : 'some time', 'breakDuration':'', 'lastLecEnd' : 'some time'},
-    ]
