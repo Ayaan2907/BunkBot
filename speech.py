@@ -27,11 +27,9 @@ def audioController(keywords):
         print(f"Audio captured ")
         # FIXME:timeout will wait for input to come and phrase time will select the phrase saied only in that time, use it in try and execute block
     # RECOGNIZE SPEECH
-    # FIXME: LISTENING SENDING RECOGNIZING SYNCRONIZATION TIMINGS LATER
     try:
         # STORING CONVERTED TEXT IN OUTPUT
-        output = r.recognize_google(audio)
-        output=output.lower()
+        output = r.recognize_google(audio).lower()
         print(f"You said --{output}" )
         return(checkKeyword(output, keywords))
 
