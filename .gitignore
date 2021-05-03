@@ -1,3 +1,9 @@
 # Default ignored files
 __pycache__
 pywhatkit_dbs.txt
+
+# user specific data
+config.json
+
+# editor specifiic(vscode)
+.vscode

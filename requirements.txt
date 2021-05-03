@@ -1,3 +1,4 @@
-speechRecognition
-pyaudio
-fuzzywuzzy
+speechRecognition==3.8.1
+pyaudio==0.2.11
+fuzzywuzzy==0.18.0
+python-Levenshtein==45.2.0
