@@ -1,0 +1,16 @@
+{
+        "CONST_senderEmail" : "",
+        "CONST_EmailPassword" : "",
+        "reciprecipientEmail" : "",
+
+        "keywords" : ["", "", ""],
+
+        "subject" : "",
+        "body" : ".",
+
+        "URL" : "https://teams.microsoft.com/_#/calendarv2",
+        "userName" : "",
+        "loginPassword" : ""
+
+}
+
