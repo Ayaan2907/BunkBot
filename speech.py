@@ -9,7 +9,7 @@ def checkKeyword(output, keywords):
     for i in range(0, len(opList)):
         for j in range(0, len(keywords)):
             score=fuzz.partial_token_set_ratio(opList[i], keywords[j])
-            if(score >= 65):
+            if(score >= 70):
                 print(f"keywords matched {opList[i]},{keywords[j]}, with {score} score")
                 return 1
             else:
@@ -40,12 +40,3 @@ def audioController(keywords):
 
 
 # if __name__ == "__main__":
-
-
-
-# audio
-# def listen()
-#   add audio
-# def read(audio)
-#   read audio
-#   return output
