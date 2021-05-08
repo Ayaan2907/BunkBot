@@ -7,3 +7,6 @@ config.json
 
 # editor specifiic(vscode)
 .vscode
+
+# virtual env
+my_env

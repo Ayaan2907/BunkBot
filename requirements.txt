@@ -1,4 +1,9 @@
-speechRecognition==3.8.1
-pyaudio==0.2.11
-fuzzywuzzy==0.18.0
-python-Levenshtein
+fuzzywuzzy==0.18.0  
+msedge-selenium-tools==3.141.3
+PyAudio==0.2.11
+python-Levenshtein==0.12.2
+requests==2.25.1
+selenium==3.141.0
+SpeechRecognition==3.8.1
+urllib3==1.26.4
+webdriver-manager==3.4.1

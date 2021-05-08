@@ -20,7 +20,7 @@ def sendEmail(recipientEmail,  CONST_senderEmail, CONST_password, subject, body)
     # sending the mail
     # server.sendmail(senderEmail, recipientEmail, subject, body)
     server.send_message(messg)
-    print(f"Message sent to {CONST_senderEmail}!!!")
+    print(f"Message sent to {recipientEmail}!!!")
     # terminating the session
     server.quit()
     print("Server stopped...")
