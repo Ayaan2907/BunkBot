@@ -1,5 +1,5 @@
+> THE README IS NOT UP TO DATE
 # Presenting OCassistant (Online Classes Assistant) the helper/proxy maker  of our online classes
-
 ## AIM
 Automating the replies on calling our name in meetings and notifying us about the call
 
